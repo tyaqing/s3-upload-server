@@ -32,7 +32,6 @@ ENV CDN_URL=your-cdn-url
 
 
 COPY --from=build_base /app/s3-upload-server /app/s3-upload-server
-COPY --from=build_base /app/bin /app/bin
 
 # Run the binary program produced by `go install`
 CMD ["/app/s3-upload-server"]
