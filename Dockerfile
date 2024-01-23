@@ -24,8 +24,10 @@ ENV SECRET_ACCESS_KEY=your-secret-access-key
 ENV ACCESS_KEY_ID=your-access-key-id
 ENV REGION=your-region
 ENV BUCKET=your-bucket
-ENV PATH=your-path
 ENV CDN_URL=your-cdn-url
+
+#ENV API_ROUTER=/upload
+#ENV PATH_PREFIX=/static
 
 
 
