@@ -19,6 +19,7 @@ func main() {
 	if apiRouter == "" {
 		apiRouter = "/upload"
 	}
+
 	r.POST(apiRouter, upload)
 
 	port := os.Getenv("PORT")
@@ -60,7 +61,10 @@ func upload(c *gin.Context) {
 
 	pathPrefix := os.Getenv("PATH_PREFIX")
 
-	key := pathPrefix + "/" + filename
+	key := filename
+	if pathPrefix != "" {
+		key = pathPrefix + "/" + filename
+	}
 
 	fmt.Println("pathPrefix", pathPrefix)
 
@@ -82,6 +86,6 @@ func upload(c *gin.Context) {
 
 	c.JSON(200, gin.H{
 		"message": "upload",
-		"cdnUrl":  cdnUrl + "/" + key,
+		"url":     cdnUrl + "/" + key,
 	})
 }

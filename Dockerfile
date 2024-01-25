@@ -22,6 +22,7 @@ ENV PORT=8080
 
 ENV SECRET_ACCESS_KEY=your-secret-access-key
 ENV ACCESS_KEY_ID=your-access-key-id
+ENV ENDPOINT=your-endpoint
 ENV REGION=your-region
 ENV BUCKET=your-bucket
 ENV CDN_URL=your-cdn-url
